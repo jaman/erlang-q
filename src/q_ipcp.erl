@@ -509,6 +509,8 @@ deserialize_body(Endianness, Type, Bin) ->
 %%------------------------------------------------------------------------------
 keys_and_values_to_list([], []) ->
   [];
+keys_and_values_to_list([], Result) ->
+  Result;
 keys_and_values_to_list([Key|Keys], [Value|Values]) ->
   [{Key, Value} | keys_and_values_to_list(Keys, Values)].
 
