@@ -67,7 +67,7 @@ connect(Host, Port) ->
 %% @end
 %%------------------------------------------------------------------------------
 close(Server) ->
-	gen_server:call(Server, close).
+	gen_server:stop(Server).
 
 %%------------------------------------------------------------------------------
 %% @doc Executes Q code sync remotly and returns the deserialized data structure.
